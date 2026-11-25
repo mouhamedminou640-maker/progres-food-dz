@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -7,53 +6,54 @@
 <title>PROGRES FOOD DZ</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f3f7f3;font-family:Arial,sans-serif;color:#183b2a}
-header{background:#087b43;color:white;padding:28px 20px;border-radius:0 0 25px 25px}
-header h1{font-size:25px;margin:0 0 10px}
-header p{margin:0}
-main{padding:20px;max-width:550px;margin:auto}
-.card{background:white;padding:20px;border-radius:16px;margin:15px 0;box-shadow:0 3px 12px #0000000c}
-label{display:block;margin:14px 0 7px;font-weight:bold}
-select,input{width:100%;padding:13px;border:1px solid #d5e1d8;border-radius:10px;font-size:15px;background:white}
-button{width:100%;padding:15px;background:#087b43;color:white;border:0;border-radius:10px;font-size:17px;font-weight:bold;margin-top:20px}
-h2{font-size:19px}
-footer{text-align:center;padding:25px;color:#718477;font-size:13px}
+body{margin:0;background:#f0f6f1;font-family:Arial,sans-serif;color:#183b2a}
+header{background:#087b43;color:white;text-align:center;padding:35px 15px 55px;border-radius:0 0 35px 35px}
+header h1{font-size:25px;margin:0 0 12px}
+header p{font-size:16px}
+main{max-width:440px;margin:35px auto;padding:15px}
+.card{background:white;padding:25px 20px;border-radius:22px;box-shadow:0 5px 25px #00000010}
+h2{text-align:center;color:#087b43}
+.sub{text-align:center;color:#718477;font-size:14px;margin-bottom:25px}
+label{display:block;font-weight:bold;margin:18px 0 9px}
+input{width:100%;padding:15px;border:1px solid #d5e1d8;border-radius:11px;font-size:16px}
+button{width:100%;padding:16px;background:#087b43;color:white;border:0;border-radius:12px;font-size:17px;font-weight:bold;margin-top:23px}
+.note{background:#f0f6f1;padding:12px;border-radius:10px;font-size:12px;line-height:1.8;margin-top:18px;color:#536b5b}
+footer{text-align:center;color:#819187;font-size:12px;margin:25px}
 </style>
 </head>
 <body>
 <header>
 <h1>🍽️ PROGRES FOOD DZ</h1>
-<p>احجز وجبتك الجامعية بسهولة</p>
+<p>وجبتك الجامعية أصبحت أسهل</p>
 </header>
 <main>
 <div class="card">
-<h2>📍 معلومات الحجز</h2>
-<label>الولاية</label>
-<input id="wilaya" placeholder="أدخل ولايتك">
-<label>الجامعة</label>
-<input id="university" placeholder="اسم الجامعة">
-<label>نوع الوجبة</label>
-<select id="meal">
-<option>وجبة الغداء</option>
-<option>وجبة العشاء</option>
-</select>
-<label>تاريخ الحجز</label>
-<input id="date" type="date">
-<button onclick="book()">تأكيد الحجز</button>
-<p id="result"></p>
+<h2>مرحباً بك 👋</h2>
+<p class="sub">سجل دخولك للوصول إلى خدمة حجز الوجبات</p>
+
+<form id="login">
+<label>رقم التسجيل الجامعي</label>
+<input id="student" type="text" placeholder="أدخل رقم التسجيل" required>
+
+<label>الرقم السري</label>
+<input id="password" type="password" placeholder="أدخل الرمز التجريبي" required>
+
+<button type="submit">تسجيل الدخول</button>
+</form>
+
+<div class="note">
+📍 الإقامة الجامعية: هباش أحمد شريف<br>
+ولاية قالمة<br>
+هذه نسخة تجريبية. لا تدخل الرقم السري الجامعي الحقيقي.
 </div>
-</main>
+</div>
 <footer>PROGRES FOOD DZ © 2026</footer>
+</main>
 <script>
-function book(){
-const w=document.getElementById('wilaya').value;
-const u=document.getElementById('university').value;
-const m=document.getElementById('meal').value;
-const d=document.getElementById('date').value;
-if(!w||!u||!d){alert('يرجى ملء جميع المعلومات');return;}
-document.getElementById('result').innerText=
-'تم تسجيل طلبك التجريبي بنجاح: '+m+' - '+u+' - '+d;
-}
+document.getElementById("login").addEventListener("submit",function(e){
+e.preventDefault();
+alert("هذه واجهة تجريبية. لم يتم التحقق من الحساب أو حفظ بيانات الدخول.");
+});
 </script>
 </body>
 </html>
